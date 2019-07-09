@@ -1,0 +1,88 @@
+---
+layout: default
+title: Fonksiyonlar
+parent: C++
+nav_order: 7
+---
+
+# Fonksiyonlar
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Inline code
+
+Code can be rendered inline by wrapping it in single back ticks.
+
+<div class="code-example" markdown="1">
+Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+```markdown
+Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```
+
+---
+
+## Syntax highlighted code blocks
+
+<div class="code-example" markdown="1">
+```c++
+#include <iostream>
+using namespace std;
+// function declaration
+int max(int num1, int num2);
+int main () {
+   // local variable declaration:
+   int a = 100;
+   int b = 200;
+   int ret;
+   // calling a function to get max value.
+   ret = max(a, b);
+   cout << "Max value is : " << ret << endl;
+   return 0;
+}
+// function returning the max between two numbers
+int max(int num1, int num2) {
+   // local variable declaration
+   int result;
+   if (num1 > num2)
+      result = num1;
+   else
+      result = num2;
+   return result; 
+}
+```
+</div>
+
+## Code blocks with rendered examples
+
+To demonstrate front end code, sometimes it's useful to show a rendered example of that code. After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
+
+<div class="code-example" markdown="1">
+
+<div class="code-example" markdown="1">
+
+[Link button](http://example.com/){: .btn }
+
+</div>
+```markdown
+[Link button](http://example.com/){: .btn }
+```
+
+</div>
+{% highlight markdown %}
+<div class="code-example" markdown="1">
+
+[Link button](http://example.com/){: .btn }
+
+</div>
+```markdown
+[Link button](http://example.com/){: .btn }
+```
+{% endhighlight %}
